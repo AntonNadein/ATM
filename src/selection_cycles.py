@@ -1,6 +1,4 @@
-def while_true_question(
-    question: str, answer_true: str, answer_false: str
-) -> str:
+def while_true_question(question: str, answer_true: str, answer_false: str) -> str:
     """
     Функция логики вопроса "Да/Нет"
     :param question: Вопрос на "Да/Нет"
@@ -51,12 +49,7 @@ def triple_question(
                     f"Статус операции {string} недоступен\n"
                     f"\nВведите {answer_one},{answer_two} или {answer_three}\n"
                 )
-        elif (
-            type(string) is str
-            and type(answer_one) is str
-            and type(answer_two) is str
-            and type(answer_three) is str
-        ):
+        elif type(string) is str and type(answer_one) is str and type(answer_two) is str and type(answer_three) is str:
             string_str = string.lower()
             if string_str in [answer_one.lower()]:
                 return answer_one.lower().lower()

@@ -6,9 +6,7 @@ from src.selection_cycles import triple_question, while_true_question
 
 class TestWhileTrueQuestion(unittest.TestCase):
 
-    @patch(
-        "builtins.input", side_effect=["sdcddw", "yes", "no", "exit", "lwlwv"]
-    )
+    @patch("builtins.input", side_effect=["sdcddw", "yes", "no", "exit", "lwlwv"])
     def test_while_true_question(self, mock_input):
         result = while_true_question("Do you agree?", "yes", "no")
         self.assertEqual(result, "yes")

@@ -3,6 +3,7 @@ import random
 
 class CardTest:
     """Класс для генерации тестовых карт"""
+
     number: str
     balance: float
     pin: int

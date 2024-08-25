@@ -1,5 +1,6 @@
 from src.find_out_balance import find_out_balance
 
+
 def test_find_out_balance(capsys):
     find_out_balance(1000)
     captured = capsys.readouterr()

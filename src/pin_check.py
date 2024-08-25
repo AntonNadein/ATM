@@ -2,10 +2,10 @@ from src.selection_cycles import while_true_question
 
 
 def check_pin(number: int) -> bool:
-    """ Функция проверки пин кода карты"""
+    """Функция проверки пин кода карты"""
     i = 3
     while i != 0:
-        input_word = while_true_question("Вернуть карту?\nВведите: да/нет\n","да", "нет")
+        input_word = while_true_question("Вернуть карту?\nВведите: да/нет\n", "да", "нет")
         if input_word == "да":
             return False
         elif input_word == "нет":
@@ -23,4 +23,3 @@ def check_pin(number: int) -> bool:
             else:
                 print("Вы ввели верный пин код\n")
                 return True
-

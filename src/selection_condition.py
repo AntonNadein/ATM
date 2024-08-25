@@ -1,6 +1,4 @@
-def selection_condition(
-    question: str, answer_one: str, answer_two: str, answer_three: str, answer_four: str
-) -> str:
+def selection_condition(question: str, answer_one: str, answer_two: str, answer_three: str, answer_four: str) -> str:
     """
     Функция логики выбора
     :param question: Условие
@@ -24,6 +22,17 @@ def selection_condition(
             return "exit"
 
 
-
-# result = selection_condition("Выбор из меню:", "Узнать баланс", "Снять деньги", "Внести деньги", "Перевод по номеру телефона")
-# print(result)
+def number_check(input_question: str, number_of_digits: int) -> bool:
+    """Функция проверки номера
+    :param input_question: Условие для проверки номера
+    :param number_of_digits: Длинна номера
+    :return: Bool
+    """
+    while True:
+        input_number = input(f"{input_question}:\n")
+        if input_number.isdigit() and len(input_number) == number_of_digits:
+            return True
+        elif input_number in ["exit"]:
+            return False
+        else:
+            print(f"Введенное значения не является числом или длинна числа не равна {number_of_digits}\n")
