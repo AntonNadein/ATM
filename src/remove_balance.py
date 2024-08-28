@@ -92,6 +92,3 @@ def money_change(withdraw_money):
         elif withdraw_money == 0:
             break
     return money_dict
-
-
-print(money_change(6000))

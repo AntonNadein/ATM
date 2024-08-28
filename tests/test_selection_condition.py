@@ -6,7 +6,7 @@ from src.selection_condition import number_check, selection_condition
 
 class TestSelectionCondition(unittest.TestCase):
 
-    @patch("builtins.input", side_effect=["one", "two", "three", "four", "exit"])
+    @patch("builtins.input", side_effect=["one", "two", "three", "four", "0"])
     def test_selection_condition(self, mock_input):
         result = selection_condition("question", "one", "two", "three", "four")
         self.assertEqual(result, "one")

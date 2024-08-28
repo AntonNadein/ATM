@@ -9,7 +9,7 @@ def selection_condition(question: str, answer_one: str, answer_two: str, answer_
     :return: Один из ответов
     """
     while True:
-        string = (input(f"{question}:\n{answer_one}\n{answer_two}\n{answer_three}\n{answer_four}\n ")).lower()
+        string = (input(f"{question}:\n")).lower()
         if string in [answer_one.lower()]:
             return "one"
         elif string in [answer_two.lower()]:
@@ -18,7 +18,7 @@ def selection_condition(question: str, answer_one: str, answer_two: str, answer_
             return "three"
         elif string in [answer_four.lower()]:
             return "four"
-        elif string in ["exit"]:
+        elif string in ["0"]:
             return "exit"
 
 
