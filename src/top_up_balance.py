@@ -1,4 +1,5 @@
-def top_up_balance(balance):
+def top_up_balance(balance: float) -> float:
+    """Функция для пополнения счета"""
     while True:
         new_balance = input("Внесите деньги для пополнения счета:\n")
         try:
@@ -10,6 +11,3 @@ def top_up_balance(balance):
             print("Сумма должна быть числом")
         if new_balance == "exit":
             return balance
-
-
-# print(top_up_balance(500))
